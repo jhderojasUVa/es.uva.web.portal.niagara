@@ -1,0 +1,56 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/enlaces.xsd"/>
+
+ 
+	<xsd:element name="Imagenes" type="OpenCmsImagenes"/>
+	
+	<xsd:complexType name="OpenCmsImagenes">
+		<xsd:sequence>
+			<xsd:element name="Imagen" type="OpenCmsImagen" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsImagen">
+		<xsd:sequence>
+			<!-- <xsd:element name="Titulo" type="OpenCmsString" minOccurs="0" maxOccurs="1" /> -->
+			<xsd:element name="Image" type="OpenCmsVfsImage" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Pie" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Alt" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Link" type="OpenCmsEnlace" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Ancho" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Posicion" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<!-- textos de ayuda -->
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.choicegenerico.imagenes.workplace.properties">
+					<bundle locale="es">
+						<resource key="editor.errormessage.Alt.notempty">El texto alternativo no puede estar vacío</resource>
+						<resource key="editor.errormessage.Image.notempty">Tienes que seleccionar una imagen de tus galerías</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.Alt.notempty">El texto alternativo no puede estar vacío</resource>
+						<resource key="editor.errormessage.Image.notempty">Tienes que seleccionar una imagen de tus galerías</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<validationrules>
+				<rule element="Alt" regex="!^$" type="error" message="${key.editor.errormessage.Alt.notempty|${validation.path}}" />
+				<rule element="Image" regex="!^$" type="error" message="${key.editor.errormessage.Image.notempty|${validation.path}}" />
+			</validationrules>
+			<layouts>
+				<layout element="Image" widget="ImageGalleryWidget" configuration="{class:'es.uva.web.portal.opencms.v85.gallerywidget.UVaCmsVfsImageWidgetConfiguration',startup:'dynamic',type:'dynamic', useformat:true}"/>
+				<!-- <layout element="Image" widget="VfsImageWidget" configuration="{useformat:true, usedescription: true, formatnames:'left:%(key.v8.news.image.left)|right:%(key.v8.news.image.right)|top:%(key.v8.news.image.top)', formatvalues: ['200x?', '200x?', '450x?']}" />-->
+				<layout element="Ancho" widget="SelectorWidget" configuration="2|3|4|5|6|7|8|9|10|11|12*" />
+				<layout element="Posicion" widget="SelectorWidget" configuration="1:Izquierda*|2:Centro|3:Derecha" />
+			</layouts>
+			<defaults/>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

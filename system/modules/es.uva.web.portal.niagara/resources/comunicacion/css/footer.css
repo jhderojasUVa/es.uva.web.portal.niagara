@@ -1,0 +1,274 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Alegreya:300, 400, 500|Arvo:300, 400, 500|IM+Fell+English+SC:300, 400, 500|Lato:300, 400, 500|Libre+Franklin:300, 400, 500|Montserrat:300, 400, 500|Open+Sans:300, 400, 500|Raleway:300, 400, 500");
+h1, h2, h3 {
+  font-family: "Libre Franklin", sans-serif; }
+
+h4, h5, h5 .opensans, p .pie_foto, li .pie_foto {
+  font-family: "Open Sans", sans-serif; }
+
+h5 .arvo {
+  font-family: "Arvo", serif; }
+
+p, li {
+  font-family: "Lato", sans-serif; }
+
+h1 .titulos_cortos {
+  font-family: "Montserrat", sans-serif; }
+
+blockquote {
+  font-family: "Raleway", sans-serif; }
+
+.script {
+  font-family: "IM Fell English", serif; }
+
+h1 {
+  color: rgba(55, 55, 55, 0.9);
+  font-weight: 300;
+  font-size: 2.8em;
+  line-height: 1.0em;
+  margin-bottom: .1em;
+  margin-top: .1em; }
+  h1 .titulos_cortos {
+    font-weight: 400; }
+
+h2 {
+  color: rgba(55, 55, 55, 0.8);
+  font-weight: 300;
+  font-size: 2.5em;
+  line-height: 1.0em;
+  margin-top: .2em;
+  margin-bottom: .0em; }
+
+h3 {
+  color: rgba(55, 55, 55, 0.8);
+  font-weight: 300;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin-top: .5em;
+  margin-bottom: .5em; }
+
+h4 {
+  color: rgba(55, 55, 55, 0.8);
+  font-weight: 400;
+  font-size: .8em;
+  line-height: 1.4em;
+  margin-top: .5em;
+  margin-bottom: .5em; }
+
+h5 {
+  font-weight: 400;
+  color: rgba(55, 55, 55, 0.8);
+  font-size: .65em;
+  line-height: 1.4em;
+  margin-top: .5em;
+  margin-bottom: .5em; }
+
+p, li {
+  font-weight: 300;
+  font-size: 1.15em;
+  line-height: 1.4em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  color: rgba(55, 55, 55, 0.8); }
+  p .pie_foto, li .pie_foto {
+    font-size: .65em;
+    font-weight: 400;
+    color: #373737;
+    line-height: 1.4em;
+    margin-top: .5em;
+    margin-bottom: .5em; }
+
+blockquote {
+  font-size: 2em;
+  line-height: 1.0;
+  color: rgba(227, 5, 74, 0.75); }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    color: rgba(55, 55, 55, 0.9);
+    font-weight: 300;
+    font-size: 1.8em;
+    line-height: 1.0em;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em; }
+
+  h2 {
+    color: rgba(55, 55, 55, 0.8);
+    font-weight: 300;
+    font-size: 1.4em;
+    line-height: 1.0em;
+    margin-top: .5em;
+    margin-bottom: .5em; }
+
+  h3 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-top: .9em;
+    margin-bottom: .5em; }
+
+  h4 {
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-top: .5em;
+    margin-bottom: .5em; }
+
+  h5 {
+    font-size: .8em;
+    line-height: 1.4em;
+    margin-top: .5em;
+    margin-bottom: .5em; }
+
+  h6 {
+    font-size: .65em;
+    line-height: 1.4em;
+    margin-top: .5em;
+    margin-bottom: .5em; }
+
+  p, li {
+    font-weight: 300;
+    font-size: 1.6em;
+    line-height: 1.2em;
+    margin-top: .6em;
+    margin-bottom: 1.5em; }
+
+  .footer p {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: rgba(55, 55, 55, 0.8); }
+
+  blockquote {
+    font-size: 2em;
+    line-height: 1.0; } }
+h2 p {
+  font-size: 1.4em;
+  line-height: 1.25em; }
+
+h2 p {
+  margin: 0; }
+
+/*
+  Definición de colores segun su A
+
+  v0.1
+*/
+/* ==== Negro ==== */
+/* ==== Azul ==== */
+/* ==== Blanco ==== */
+/* === Generico === */
+
+footer form {
+	border: none;
+	margin: inherit;
+	padding: inherit;
+}
+
+footer {
+  color: white; }
+  footer .mapa {
+    border-top: 1px solid #121212;
+    border-bottom: 1px solid #121212;
+    background-color: #c5c5c5; }
+    footer .mapa .gmap {
+      margin: 0;
+      padding: 0; }
+  footer .enlaces {
+    background-color: #0b1f4a;
+    color: white; }
+    footer .enlaces h1, footer .enlaces h2, footer .enlaces p, footer .enlaces ul, footer .enlaces li, footer .enlaces a {
+      color: #f8f8f8; }
+	footer .enlaces a {
+		font-size: 1.5em;
+	}
+    footer .enlaces h1 {
+	  font-family: "Lato", sans-serif;
+	  border-top: 1px dotted #5af0ff;
+	  border-bottom: 1px dotted #5af0ff;
+      margin-top: 20px;
+	  padding: 5px 0px;
+      font-size: 1.67em; }
+	footer .enlaces h2 {
+		border: 1px solid #f8f8f8;
+	}
+    footer .enlaces p {
+      font-size: 11px; }
+    footer .enlaces ul, footer .enlaces li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      font-size: 11px; }
+	footer .enlaces li {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+    footer .enlaces .pie_enlaces {
+      padding: 70px 0px; }
+      footer .enlaces .pie_enlaces .lema {
+        text-align: left;
+        line-height: 1;
+        font-size: 36px; }
+      footer .enlaces .pie_enlaces form input[type="text"] {
+	  	color: inherit;
+		font: inherit;
+        width: 100%;
+        border: 1px solid #121212; 
+		padding: 0.3em;}
+      footer .enlaces .pie_enlaces form button {
+        text-transform: uppercase; 
+		
+		    margin: 0;
+		  padding: 0;
+		  padding-left: 1em;
+		  padding-right: 1em;
+		  padding-top: 0.2em;
+		  padding-bottom: 0.2em;
+		  border-radius: 3px;
+		  border: 1px solid black;
+		  margin-top: 2px;
+		  
+		  font-weight: 600;
+		
+		}
+	footer .enlaces .pie_enlaces form button:hover {
+		color: white;
+		background-color: black;
+	}
+  footer .politica {
+    background-color: #001032;
+    text-align: center;
+    padding-bottom: 5px; }
+    footer .politica h1, footer .politica p, footer .politica ul, footer .politica li, footer .politica a {
+      color: #fff; }
+    footer .politica h1 {
+      font-size: 12px;
+	  margin-top: 5px;}
+    footer .politica p {
+      font-size: 10px; }
+	  
+footer .enlaces h1 {
+	margin-bottom: 15px;
+}
+
+footer .sociaicon:hover i {
+	color: #5af0ff !important;
+}
+
+footer .btn.btn-primary {
+	font-size: 1.3em;
+	margin-bottom: 0.5em;
+	color: black;
+	background-color: white;
+	border-radius: 0px;
+	border-color: black;
+	padding: 2px 25px;
+	font-family: "Montserrat", sans-serif;
+	margin-left: -15px;
+}
+
+footer .btn.btn-primary:hover {
+	background-color: rgba(90, 240, 255, 0.6);
+}
+
+/*# sourceMappingURL=footer.css.map */

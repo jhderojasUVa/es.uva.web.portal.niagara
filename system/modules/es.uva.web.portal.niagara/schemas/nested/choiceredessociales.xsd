@@ -1,0 +1,89 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	
+	<xsd:element name="ChoiceRedesSociales" type="OpenCmsChoiceRedesSociales"/>
+	
+	<xsd:complexType name="OpenCmsChoiceRedesSociales">
+		<xsd:sequence>
+			<xsd:element name="ChoiceRedSocial" type="OpenCmsChoiceRedSocial" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsChoiceRedSocial">
+		<xsd:choice>
+			<!-- 
+			Tipos de elementos del tipo choice redes sociales
+			-->
+			<xsd:element name="Twitter" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Facebook" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Googleplus" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Linkedin" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Wordpress" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Flickr" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Blogger" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Youtube" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Vimeo" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Soundcloud" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Instagram" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Web" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<!-- textos de ayuda -->
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.redessociales.choiceredsocial.workplace.properties">
+					<bundle locale="es">
+						<resource key="editor.errormessage.campo.notempty">Por favor, introduzca la URL de la red social</resource>
+						<resource key="editor.errormessage.campo.notvalid">URL no válida</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.campo.notvalid">URL no válida</resource>
+					</bundle>
+				</xmlbundle>
+				
+			</resourcebundles>
+			<mappings>
+				<!-- Mapeos -->
+			</mappings> 
+			<validationrules>				
+				<rule element="Twitter" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Facebook" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Googleplus" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Linkedin" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Wordpress" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Blogger" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Flickr" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Youtube" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+
+				<rule element="Vimeo" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+
+				<rule element="Soundcloud" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Instagram" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+				
+				<rule element="Web" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.campo.notvalid|${validation.path}}" />
+			</validationrules>
+			<layouts>
+				<!-- Widgets a usar en los tipos -->				
+			</layouts>
+			<defaults>
+				<!-- Texto estandar -->
+				<!-- 
+				<default element="Tabla" value="<table><tr><th>Cabecera 1</th><th>Cabecera 2</th><th>Cabecera 3</th></tr><tr><td>Texto 1</td><td>Texto 2</td><td>Texto 3</td></tr><tr><td>Texto 4</td><td>Texto 5</td><td>Texto 6</td></tr></table>"/>
+				-->
+			</defaults>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>
+

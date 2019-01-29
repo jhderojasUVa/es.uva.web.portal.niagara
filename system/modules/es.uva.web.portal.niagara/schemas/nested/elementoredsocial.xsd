@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/choiceredessociales.xsd" />
+	
+	<xsd:element name="ChoiceRedesSocialesContenidos" type="OpenCmsChoiceRedesSocialesContenidos"/>
+	
+	<xsd:complexType name="OpenCmsChoiceRedesSocialesContenidos">
+		<xsd:sequence>
+			<xsd:element name="ChoiceRedesSocialesContenido" type="OpenCmsChoiceRedesSocialesContenido" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsChoiceRedesSocialesContenido">
+		<xsd:sequence>
+			<xsd:element name="TituloRed" type="OpenCmsString" />
+			<xsd:element name="DescripcionRed" type="OpenCmsHtml" />
+			<xsd:element name="ElementoRed" type="OpenCmsChoiceRedSocial" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+	
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<!-- textos de ayuda -->
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.redessociales.workplace.properties">
+					<bundle locale="es">
+						<resource key="label.ChoiceRedesSocialesContenido.TituloRed">Titulo del elemento</resource>
+						<resource key="label.ChoiceRedesSocialesContenido.DescripcionRed">Descripción del elemento</resource>
+						<resource key="label.ChoiceRedesSocialesContenido.ElementoRed">Red Social del elemento</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="label.ChoiceRedesSocialesContenido.TituloRed">Element title</resource>
+						<resource key="label.ChoiceRedesSocialesContenido.DescripcionRed">Group description</resource>
+						<resource key="label.ChoiceRedesSocialesContenido.ElementoRed">Social Network element</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<mappings>
+				<!-- Mapeos -->
+			</mappings>
+			<validationrules>
+				<!-- Reglas de validacion -->
+				<!-- Obligatorio -->
+				<!-- Opcional -->
+			</validationrules>
+			<layouts>
+				<!-- Widgets a usar en los tipos -->
+			</layouts>
+			<defaults>
+				<!-- Texto estandar -->
+				<!--
+				<default element="Tabla" value="<table><tr><th>Cabecera 1</th><th>Cabecera 2</th><th>Cabecera 3</th></tr><tr><td>Texto 1</td><td>Texto 2</td><td>Texto 3</td></tr><tr><td>Texto 4</td><td>Texto 5</td><td>Texto 6</td></tr></table>"/>
+				-->
+			</defaults>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

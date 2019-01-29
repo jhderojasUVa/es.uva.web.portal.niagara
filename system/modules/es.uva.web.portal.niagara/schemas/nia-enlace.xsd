@@ -1,0 +1,46 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="NIAEnlaces" type="OpenCmsNIAEnlaces"/>
+
+	<xsd:complexType name="OpenCmsNIAEnlaces">
+		<xsd:sequence>
+			<xsd:element name="NIAEnlace" type="OpenCmsNIAEnlace" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsNIAEnlace">
+		<xsd:sequence>
+			<xsd:element name="Texto" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Link" type="OpenCmsVarLink" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Target" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<mappings>
+			</mappings>
+			<defaults>
+				<default element="Texto" value="¡Cambia el texto del enlace!" />
+			</defaults>
+			<layouts>
+				<!-- Widgets a usar en los tipos -->
+				<layout element="Link" widget="VfsFileWidget" configuration="startsite=/sites/comunicacion/|notprojectaware"/>
+				<layout element="Target" widget="SelectorWidget" configuration="1:Nueva ventana|2:Misma ventana*" />
+			</layouts>
+			<validationrules>
+				<rule element="Texto" regex="!^$" type="error" message="${key.editor.errormessage.Enlace.Texto.notempty|${validation.path}}" />
+				<rule element="Texto" regex="!^\s+([A-Za-z0-9]*)" type="warning" message="${key.editor.errormessage.Enlace.Texto.leftempty|${validation.path}}" />
+				
+				<rule element="Link" regex="!^$" type="error" message="${key.editor.errormessage.Enlace.Link.notempty|${validation.path}}" />
+				<rule element="Link" regex="!^\s+([A-Za-z0-9]*)" type="warning" message="${key.editor.errormessage.Enlace.Link.leftempty|${validation.path}}" />
+			</validationrules>
+			<relations/>
+			<searchsettings containerPageOnly="true"/>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+</xsd:schema>

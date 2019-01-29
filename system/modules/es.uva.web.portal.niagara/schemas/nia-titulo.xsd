@@ -1,0 +1,42 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="NIATitulos" type="OpenCmsNIATitulos"/>
+
+	<xsd:complexType name="OpenCmsNIATitulos">
+		<xsd:sequence>
+			<xsd:element name="NIATitulo" type="OpenCmsNIATitulo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsNIATitulo">
+		<xsd:sequence>
+			<xsd:element name="Texto" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<mappings>
+			</mappings>
+			<defaults>
+				<default element="Texto" value="¡Cambia el texto del titulo!" />
+			</defaults>
+			<layouts>
+			</layouts>
+			<validationrules>
+				<rule element="Texto" regex="^(.{1,250})$" type="error" message="${key.editor.errormessage.Titulo.Texto.notempty|${validation.path}}" />
+				<rule element="Texto" regex="!^\s+([A-Za-z0-9]*)" type="warning" message="${key.editor.errormessage.Titulo.Texto.leftempty|${validation.path}}" />
+			</validationrules>
+			<relations/>
+			<searchsettings containerPageOnly="false">
+				<searchsetting element="Texto" searchcontent="true">
+					<solrfield targetfield="Titulo" />
+				</searchsetting>
+			</searchsettings>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+</xsd:schema>

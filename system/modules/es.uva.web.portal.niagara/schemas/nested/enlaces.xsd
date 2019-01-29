@@ -1,0 +1,51 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="Enlaces" type="OpenCmsEnlaces"/>
+	
+	<xsd:complexType name="OpenCmsEnlaces">
+		<xsd:sequence>
+			<xsd:element name="Enlace" type="OpenCmsEnlace" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsEnlace">
+		<xsd:sequence>
+			<!-- <xsd:element name="Titulo" type="OpenCmsString" minOccurs="0" maxOccurs="1" /> -->
+			<xsd:element name="Texto" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+			<!-- <xsd:element name="Alt" type="OpenCmsString" minOccurs="1" maxOccurs="1" /> -->
+			<xsd:element name="Link" type="OpenCmsVarLink" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Target" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<!-- textos de ayuda -->
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.choicegenerico.enlaces.workplace.properties">
+					<bundle locale="es">
+						<resource key="editor.errormessage.Link.notempty">Debes indicar el destino del enlace</resource>
+						<resource key="editor.errormessage.Texto.notempty">El texto del enlace no puede estar vacío</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.Link.notempty">Debes indicar el destino del enlace</resource>
+						<resource key="editor.errormessage.Texto.notempty">El texto del enlace no puede estar vacío</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<validationrules>
+				<rule element="Texto" regex="!^$" type="error" message="${key.editor.errormessage.Texto.notempty|${validation.path}}" />
+				<rule element="Link" regex="!^$" type="error" message="${key.editor.errormessage.Texto.notempty|${validation.path}}" />
+			</validationrules>
+			<layouts>
+				<layout element="Target" widget="SelectorWidget" configuration="_blank:Nueva ventana*|_self:Misma ventana" />
+			</layouts>
+			<defaults>
+				<!-- <default element="Alt" value="%(key.label.default.Alt)"/> -->
+			</defaults>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

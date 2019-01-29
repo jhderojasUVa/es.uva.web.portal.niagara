@@ -1,0 +1,49 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="Videos" type="OpenCmsVideos"/>
+	
+	<xsd:complexType name="OpenCmsVideos">
+		<xsd:sequence>
+			<xsd:element name="Video" type="OpenCmsVideo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsVideo">
+		<xsd:sequence>
+			<xsd:element name="Titulo" type="OpenCmsString" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Video" type="OpenCmsString" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Ancho" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Posicion" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Aspecto" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.choicegenerico.videos.workplace">
+					<bundle locale="es">
+						<resource key="editor.errormessage.Titulo.notempty">El título no puede estar vacío</resource>
+						<resource key="editor.errormessage.Video.notvalid">El enlace al vídeo no es válido</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.Titulo.notempty">El título no puede estar vacío</resource>
+						<resource key="editor.errormessage.Video.notvalid">El enlace al vídeo no es válido</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<layouts>
+				<layout element="Ancho" widget="SelectorWidget" configuration="2|3|4|5|6|7|8|9|10|11|12*" />
+				<layout element="Posicion" widget="SelectorWidget" configuration="1:Izquierda*|2:Centro|3:Derecha" />
+				<layout element="Aspecto" widget="SelectorWidget" configuration="1:16-9*|2:4-3" />
+			</layouts>
+			<validationrules>
+				<rule element="Titulo" regex="!^$" type="error" message="${key.editor.errormessage.Titulo.notempty|${validation.path}}" />
+				<rule element="Video" regex="^http(s)?://.*" type="error" message="${key.editor.errormessage.Video.notvalid|${validation.path}}" />
+			</validationrules>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

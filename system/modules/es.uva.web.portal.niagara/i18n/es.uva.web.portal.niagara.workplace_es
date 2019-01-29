@@ -1,0 +1,44 @@
+
+fileicon.uva-noticia=Noticia
+title.uva-noticia=Crear un elemento noticia
+desc.uva-noticia=Una noticia del Gabinete de comunicación
+
+desc.nia-documento=Documento
+fileicon.nia-documento=Documento Comunicación
+title.nia-documento=Documento
+
+fileicon.nia-redsocial=Red Social
+desc.nia-redsocial=Red Social de Comunicación
+title.nia-redsocial=Red Social de Comunicación
+
+title.nia-video=Video de Comunicación
+desc.nia-video=Video de Comunicación
+fileicon.nia-video=Video
+
+desc.nia-subtitulo=Título para Comunicación
+title.nia-subtitulo=Título para Comunicación
+fileicon.nia-subtitulo=Titulo Comunicación
+
+title.nia-titulo=Título para Comunicación
+fileicon.nia-titulo=Titulo Comunicación
+desc.nia-titulo=Título para Comunicación
+
+fileicon.nia-enlace=Enlace Comunicacón
+desc.nia-enlace=Enlace para Comunicación
+title.nia-enlace=Enlace para Comunicación
+
+title.nia-noticia=Noticia de Comunicación
+fileicon.nia-noticia=Noticia Comunicación
+desc.nia-noticia=Noticia de Comunicación
+
+fileicon.nia-flexible=Flexible Comunicación
+desc.nia-flexible=Un contenido de tipo flexible para comunicación
+title.nia-flexible=Crear un elemento flexible
+
+fileicon.nia-lista=Lista
+title.nia-lista=Crear un elemento lista para Comunicación
+desc.nia-lista=Crear un elemento lista para Comunicación
+
+desc.nia-slideshow=Carrusel para comunicación
+fileicon.nia-slideshow=Slideshow
+title.nia-slideshow=Carrusel para comunicación

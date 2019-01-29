@@ -1,0 +1,3368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<export>
+	<info>
+		<creator>e09338789f</creator>
+		<opencms_version>10.5.3</opencms_version>
+		<createdate>Tue, 29 Jan 2019 11:16:12 GMT</createdate>
+		<infoproject>Offline</infoproject>
+		<export_version>10</export_version>
+	</info>
+	<module>
+		<name>es.uva.web.portal.niagara</name>
+		<nicename/>
+		<class/>
+		<export-mode name="default"/>
+		<description/>
+		<version>0.1</version>
+		<authorname><![CDATA[Grupo Web de la Universidad de Valladolid]]></authorname>
+		<authoremail><![CDATA[soporte-web@uva.es]]></authoremail>
+		<datecreated/>
+		<userinstalled/>
+		<dateinstalled/>
+		<dependencies/>
+		<exportpoints>
+			<exportpoint uri="/system/modules/es.uva.web.portal.niagara/classes/" destination="WEB-INF/classes/"/>
+			<exportpoint uri="/system/modules/es.uva.web.portal.niagara/lib/" destination="WEB-INF/lib/"/>
+			<exportpoint uri="/system/modules/es.uva.web.portal.niagara/resources/" destination="resources/"/>
+		</exportpoints>
+		<resources>
+			<resource uri="/system/modules/es.uva.web.portal.niagara/"/>
+			<resource uri="/system/workplace/resources/filetypes/uva-noticia.png"/>
+			<resource uri="/system/workplace/resources/filetypes/uva-noticia_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-documento.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-documento_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-redsocial.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-redsocial_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-video.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-video_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-subtitulo.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-subtitulo_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-titulo.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-titulo_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-enlace.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-enlace_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-noticia.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-noticia_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-flexible.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-flexible_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-lista.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-lista_big.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-slideshow.png"/>
+			<resource uri="/system/workplace/resources/filetypes/nia-slideshow_big.png"/>
+		</resources>
+		<excluderesources/>
+		<parameters/>
+		<resourcetypes>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-documento" id="10005">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-documento.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-redsocial" id="10006">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-redsocial.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-video" id="10007">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-video.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-subtitulo" id="10008">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-subtitulo.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-titulo" id="10009">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-titulo.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-enlace" id="10011">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-enlace.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-noticia" id="10012">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-noticia.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-flexible" id="10013">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-flexible.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-lista" id="10015">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-lista.xsd</param>
+			</type>
+			<type class="org.opencms.file.types.CmsResourceTypeXmlContent" name="nia-slideshow" id="10016">
+				<param name="schema">/system/modules/es.uva.web.portal.niagara/schemas/nia-slideshow.xsd</param>
+			</type>
+		</resourcetypes>
+		<explorertypes>
+			<explorertype name="nia-documento" key="fileicon.nia-documento" icon="nia-documento.png" bigicon="nia-documento_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-documento" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-documento" key="title.nia-documento"/>
+			</explorertype>
+			<explorertype name="nia-redsocial" key="fileicon.nia-redsocial" icon="nia-redsocial.png" bigicon="nia-redsocial_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-redsocial" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-redsocial" key="title.nia-redsocial"/>
+			</explorertype>
+			<explorertype name="nia-video" key="fileicon.nia-video" icon="nia-video.png" bigicon="nia-video_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-video" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-video" key="title.nia-video"/>
+			</explorertype>
+			<explorertype name="nia-subtitulo" key="fileicon.nia-subtitulo" icon="nia-subtitulo.png" bigicon="nia-subtitulo_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-subtitulo" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-subtitulo" key="title.nia-subtitulo"/>
+			</explorertype>
+			<explorertype name="nia-titulo" key="fileicon.nia-titulo" icon="nia-titulo.png" bigicon="nia-titulo_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-titulo" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-titulo" key="title.nia-titulo"/>
+			</explorertype>
+			<explorertype name="nia-enlace" key="fileicon.nia-enlace" icon="nia-enlace.png" bigicon="nia-enlace_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-enlace" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-enlace" key="title.nia-enlace"/>
+			</explorertype>
+			<explorertype name="nia-noticia" key="fileicon.nia-noticia" icon="nia-noticia.png" bigicon="nia-noticia_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-noticia" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-noticia" key="title.nia-noticia"/>
+			</explorertype>
+			<explorertype name="nia-flexible" key="fileicon.nia-flexible" icon="nia-flexible.png" bigicon="nia-flexible_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-flexible" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-flexible" key="title.nia-flexible"/>
+			</explorertype>
+			<explorertype name="nia-lista" key="fileicon.nia-lista" icon="nia-lista.png" bigicon="nia-lista_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-lista" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-lista" key="title.nia-lista"/>
+			</explorertype>
+			<explorertype name="nia-slideshow" key="fileicon.nia-slideshow" icon="nia-slideshow.png" bigicon="nia-slideshow_big.png" reference="xmlcontent">
+				<newresource page="structurecontent" uri="newresource_xmlcontent.jsp?newresourcetype=nia-slideshow" order="10" autosetnavigation="false" autosettitle="false" info="desc.nia-slideshow" key="title.nia-slideshow"/>
+			</explorertype>
+		</explorertypes>
+	</module>
+	<files>
+		<file>
+			<destination>system</destination>
+			<type>folder</type>
+			<uuidstructure>1de80c57-f75b-11e6-abfe-0050568213af</uuidstructure>
+			<datelastmodified>Mon, 20 Feb 2017 10:55:39 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 20 Feb 2017 10:55:39 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol>
+				<accessentry>
+					<uuidprincipal>ROLE.WORKPLACE_USER</uuidprincipal>
+					<flags>514</flags>
+					<permissionset>
+						<allowed>1</allowed>
+						<denied>0</denied>
+					</permissionset>
+				</accessentry>
+			</accesscontrol>
+		</file>
+		<file>
+			<destination>system/modules</destination>
+			<type>folder</type>
+			<uuidstructure>1f9630c3-f75b-11e6-abfe-0050568213af</uuidstructure>
+			<datelastmodified>Mon, 20 Feb 2017 10:55:42 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 20 Feb 2017 10:55:42 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol>
+				<accessentry>
+					<uuidprincipal>ROLE.WORKPLACE_USER</uuidprincipal>
+					<flags>514</flags>
+					<permissionset>
+						<allowed>5</allowed>
+						<denied>0</denied>
+					</permissionset>
+				</accessentry>
+			</accesscontrol>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara</destination>
+			<type>folder</type>
+			<uuidstructure>c5523c2f-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:50 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:50 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/.config</source>
+			<destination>system/modules/es.uva.web.portal.niagara/.config</destination>
+			<type>module_config</type>
+			<uuidstructure>6594114a-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>6594114b-e75c-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 18 Dec 2018 08:12:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/classes</destination>
+			<type>folder</type>
+			<uuidstructure>c62fcafb-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/classes/es</destination>
+			<type>folder</type>
+			<uuidstructure>c631519d-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/classes/es/uva</destination>
+			<type>folder</type>
+			<uuidstructure>c634acff-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/classes/es/uva/web</destination>
+			<type>folder</type>
+			<uuidstructure>c638a4a1-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/classes/es/uva/web/portal</destination>
+			<type>folder</type>
+			<uuidstructure>c641cc63-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/classes/es/uva/web/portal/niagara</destination>
+			<type>folder</type>
+			<uuidstructure>c65442f5-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/elements</destination>
+			<type>folder</type>
+			<uuidstructure>c62395f3-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/elements/facebook</destination>
+			<type>folder</type>
+			<uuidstructure>5eeff8db-17e7-11e9-bc72-0050568213af</uuidstructure>
+			<datelastmodified>Mon, 14 Jan 2019 10:30:33 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Mon, 14 Jan 2019 10:30:10 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Description</name>
+					<value><![CDATA[Componentes para leer de Facebook desde Servidor]]></value>
+				</property>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Facebook App]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/elements/facebook/facebook.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/elements/facebook/facebook.js</destination>
+			<type>plain</type>
+			<uuidstructure>a0fbf9b6-18a1-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>a0fbf9b7-18a1-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 07:16:35 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 15 Jan 2019 08:43:28 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Facebook Read]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/elements/facebook/facebook_feed.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/elements/facebook/facebook_feed.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>252b412b-189b-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>252b412c-189b-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Tue, 15 Jan 2019 08:06:51 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 15 Jan 2019 07:57:03 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Este pide el feed]]></value>
+				</property>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/elements/facebook/facebook_token.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/elements/facebook/facebook_token.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>763a7f1f-17e7-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>763a7f20-17e7-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Tue, 15 Jan 2019 08:06:39 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Mon, 14 Jan 2019 10:30:50 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Este pide el token necesario en el servidor]]></value>
+				</property>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/elementviews</destination>
+			<type>folder</type>
+			<uuidstructure>0fe3e35f-f301-11e8-802a-0050568213af</uuidstructure>
+			<datelastmodified>Wed, 28 Nov 2018 11:30:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 28 Nov 2018 11:30:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/elementviews/niagara_elementview</source>
+			<destination>system/modules/es.uva.web.portal.niagara/elementviews/niagara_elementview</destination>
+			<type>elementview</type>
+			<uuidstructure>0ff7b981-f301-11e8-802a-0050568213af</uuidstructure>
+			<uuidresource>0ff7b982-f301-11e8-802a-0050568213af</uuidresource>
+			<datelastmodified>Wed, 28 Nov 2018 11:31:53 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 28 Nov 2018 11:30:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Tipos comunicacion]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[true]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters</destination>
+			<type>folder</type>
+			<uuidstructure>c6262e05-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-documento-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-documento-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>739e3d25-e7e4-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>739e3d26-e7e4-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 08:37:10 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:08:21 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Documento Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-documento-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-documento-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>73755862-e7e4-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>73755863-e7e4-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:44:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:08:21 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-enlace-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-enlace-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>e7f88d5d-e800-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>e7f88d5e-e800-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:34:28 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:32:02 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Enlace Comunicacón]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-enlace-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-enlace-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>e7eaaaaa-e800-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>e7eaaaab-e800-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:34:56 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:32:02 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-flexible-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-flexible-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>9406af07-ebd4-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>9406af08-ebd4-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Mon, 19 Nov 2018 08:27:11 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 08:24:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Flexible Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-flexible-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-flexible-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>93e98a14-ebd4-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>93e98a15-ebd4-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Mon, 19 Nov 2018 08:27:34 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 08:24:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-lista-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-lista-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>efd182c5-fd31-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>efd182c6-fd31-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Tue, 11 Dec 2018 11:00:49 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:45:55 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Lista]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-lista-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-lista-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>efc1cb52-fd31-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>efc1cb53-fd31-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Wed, 12 Dec 2018 11:54:39 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:45:55 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-detail-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-detail-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>dd1e629b-fd35-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>dd1e629c-fd35-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Thu, 10 Jan 2019 12:02:15 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 11:14:01 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Formateador de Detalle para una Noticia de Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-detail-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-detail-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>f63a9ba1-fd35-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>f63a9ba2-fd35-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Thu, 10 Jan 2019 12:48:42 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 11:14:44 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-display-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-display-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>d82a814c-ff9e-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>d82a814d-ff9e-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 12:52:01 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 12:50:33 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Formateador de Display para una Noticia de Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-display-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-display-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>dbe7d772-ff9e-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>dbe7d773-ff9e-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 12:48:53 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 12:50:39 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>cb5fb748-e808-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>cb5fb749-e808-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 12:53:49 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 12:28:30 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Formateador para Noticia de Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>cb572bc5-e808-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>cb572bc6-e808-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 12:49:03 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 12:28:30 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-redsocial-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-redsocial-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>59dd9c0b-e7e6-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>59dd9c0c-e7e6-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:56:15 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:21:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Formateador para  Red Social de Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-redsocial-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-redsocial-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>59bec968-e7e6-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>59bec969-e7e6-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 12:07:19 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:21:56 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-slideshow-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-slideshow-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>3c10101c-029c-11e9-afe8-0050568213af</uuidstructure>
+			<uuidresource>3c10101d-029c-11e9-afe8-0050568213af</uuidresource>
+			<datelastmodified>Tue, 18 Dec 2018 08:15:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 18 Dec 2018 08:09:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Slideshow]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-slideshow-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-slideshow-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>3c007fb9-029c-11e9-afe8-0050568213af</uuidstructure>
+			<uuidresource>3c007fba-029c-11e9-afe8-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:20:33 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 18 Dec 2018 08:09:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-subtitulo-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-subtitulo-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>326f45bd-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>326f45be-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:28:58 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:19:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Titulo Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-subtitulo-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-subtitulo-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>325be4ca-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>325be4cb-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:30:13 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:19:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-titulo-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-titulo-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>c54b1973-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>c54b1974-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:29:23 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:23:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Titulo Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-titulo-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-titulo-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>c53bfe40-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>c53bfe41-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:29:58 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:23:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-video-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-video-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>aec7fc3a-e7ec-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>aec7fc3b-e7ec-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 09:13:43 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 09:07:16 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample formatter for Video]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/nia-video-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/nia-video-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>aeb362c7-e7ec-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>aeb362c8-e7ec-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 09:09:53 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 09:07:16 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/uva-noticia-formatter-config.xml</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/uva-noticia-formatter-config.xml</destination>
+			<type>formatter_config</type>
+			<uuidstructure>657d2de4-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>657d2de5-e75c-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 12:13:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Formateador de Noticia para Comunicación]]></value>
+				</property>
+				<property>
+					<name>locale</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>locale-available</name>
+					<value><![CDATA[en]]></value>
+				</property>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/formatters/uva-noticia-formatter.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/formatters/uva-noticia-formatter.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>65753ea1-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>65753ea2-e75c-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 12:15:58 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/i18n</destination>
+			<type>folder</type>
+			<uuidstructure>6565872c-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 15:54:25 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/i18n/es.uva.web.portal.niagara.workplace_es</source>
+			<destination>system/modules/es.uva.web.portal.niagara/i18n/es.uva.web.portal.niagara.workplace_es</destination>
+			<type>propertyvfsbundle</type>
+			<uuidstructure>656a903e-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>656a903f-e75c-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 18 Dec 2018 08:09:25 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>search.exclude</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/resources</destination>
+			<type>folder</type>
+			<uuidstructure>c62cbdb9-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:14 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion</destination>
+			<type>folder</type>
+			<uuidstructure>16942163-ff85-11e8-afe8-0050568213af</uuidstructure>
+			<datelastmodified>Fri, 14 Dec 2018 09:46:10 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:46:10 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css</destination>
+			<type>folder</type>
+			<uuidstructure>1e7138f5-ff85-11e8-afe8-0050568213af</uuidstructure>
+			<datelastmodified>Fri, 14 Dec 2018 09:46:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:46:24 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/all.css</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/all.css</destination>
+			<type>plain</type>
+			<uuidstructure>280d3e98-ff85-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>280d3e99-ff85-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:46:40 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:46:40 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[all]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/bootstrap.min.css</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/bootstrap.min.css</destination>
+			<type>plain</type>
+			<uuidstructure>542f2843-ff85-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>542f2844-ff85-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:47:54 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:47:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[bootstrap.min]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/footer.css</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/footer.css</destination>
+			<type>plain</type>
+			<uuidstructure>64b61f22-1e1e-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>64b61f23-1e1e-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Tue, 22 Jan 2019 08:19:19 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 22 Jan 2019 08:19:09 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Footer]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/header.css</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/css/header.css</destination>
+			<type>plain</type>
+			<uuidstructure>8e715731-1e20-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>8e715732-1e20-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Wed, 19 Sep 2018 07:20:22 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 22 Jan 2019 08:34:38 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[header]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img</destination>
+			<type>folder</type>
+			<uuidstructure>c4d3aeda-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:14 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:47 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/activa_edicion.jpg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/activa_edicion.jpg</destination>
+			<type>image</type>
+			<uuidstructure>c554eccc-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>c554eccd-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:47 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[activa_edicion]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:14,h:14]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/ajax-loader.gif</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/ajax-loader.gif</destination>
+			<type>image</type>
+			<uuidstructure>c55e89c0-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>c55e89c1-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:47 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[ajax-loader]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/cabeceraesduva.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/cabeceraesduva.png</destination>
+			<type>image</type>
+			<uuidstructure>cae6b4d4-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cae6b4d5-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[cabeceraesduva]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:1200,h:169]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/cabeceraesduva_small.jpg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/cabeceraesduva_small.jpg</destination>
+			<type>image</type>
+			<uuidstructure>caf5f718-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>caf5f719-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[cabeceraesduva_small]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:207,h:90]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/cabeceraesduva_small.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/cabeceraesduva_small.png</destination>
+			<type>image</type>
+			<uuidstructure>cb04eb3c-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb04eb3d-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[cabeceraesduva_small]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:207,h:90]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/documento.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/documento.png</destination>
+			<type>image</type>
+			<uuidstructure>cb0cda80-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb0cda81-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[documento]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/edita_elemento.jpg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/edita_elemento.jpg</destination>
+			<type>image</type>
+			<uuidstructure>cb187344-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb187345-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[edita_elemento]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:18,h:18]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/editar.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/editar.png</destination>
+			<type>image</type>
+			<uuidstructure>cb23bde8-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb23bde9-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[editar]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:19,h:19]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/enlace.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/enlace.png</destination>
+			<type>image</type>
+			<uuidstructure>cb27dc9c-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb27dc9d-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[enlace]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/globe.svg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/globe.svg</destination>
+			<type>plain</type>
+			<uuidstructure>cb50e770-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb50e771-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:57 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[globe]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/header2.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/header2.png</destination>
+			<type>image</type>
+			<uuidstructure>cb7dc3d3-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb7dc3d4-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[header2]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:1200,h:169]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/header2_eng.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/header2_eng.png</destination>
+			<type>image</type>
+			<uuidstructure>cb9a9aa7-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cb9a9aa8-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[header2_eng]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:1200,h:169]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/imagen_por_defecto.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/imagen_por_defecto.png</destination>
+			<type>image</type>
+			<uuidstructure>cba4d3db-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cba4d3dc-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[imagen_por_defecto]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:128,h:128]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logo_uva.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logo_uva.png</destination>
+			<type>image</type>
+			<uuidstructure>6da6428d-1e20-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>6da6428e-1e20-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Wed, 04 Jul 2018 11:06:45 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 22 Jan 2019 08:33:43 GMT</datecreated>
+			<usercreated>e09338789f</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[logo_uva]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:255,h:109]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logo_uva.svg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logo_uva.svg</destination>
+			<type>plain</type>
+			<uuidstructure>2f999f0c-f14e-11e8-ae79-0050568213af</uuidstructure>
+			<uuidresource>2f999f0d-f14e-11e8-ae79-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 26 Nov 2018 07:37:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[logo_uva]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logo_uva_cuadrado.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logo_uva_cuadrado.png</destination>
+			<type>image</type>
+			<uuidstructure>2fb627bf-f14e-11e8-ae79-0050568213af</uuidstructure>
+			<uuidresource>2fb627c0-f14e-11e8-ae79-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 26 Nov 2018 07:37:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[logo_uva_cuadrado]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:103,h:103]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logotipo-pequeno.jpg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logotipo-pequeno.jpg</destination>
+			<type>image</type>
+			<uuidstructure>cbbe9d6f-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cbbe9d70-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[logotipo-pequeno]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:334,h:120]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logotipo-pequeno_eng.png</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/logotipo-pequeno_eng.png</destination>
+			<type>image</type>
+			<uuidstructure>cbcaf983-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cbcaf984-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[logotipo-pequeno_eng]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:334,h:120]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/nuevo_elemento.jpg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/nuevo_elemento.jpg</destination>
+			<type>image</type>
+			<uuidstructure>cbd75597-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cbd75598-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[nuevo_elemento]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/uva1.svg</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/img/uva1.svg</destination>
+			<type>plain</type>
+			<uuidstructure>cbe9cc2b-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>cbe9cc2c-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:42:58 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[uva1]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js</destination>
+			<type>folder</type>
+			<uuidstructure>db2bbe0e-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:14 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:43:24 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/breadcrumb.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/breadcrumb.js</destination>
+			<type>plain</type>
+			<uuidstructure>e111c5d2-197f-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>e111c5d3-197f-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:14:23 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 16 Jan 2019 11:14:23 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[breadcrumb]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/comunicacion.bundle.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/comunicacion.bundle.js</destination>
+			<type>plain</type>
+			<uuidstructure>4ca7a404-0381-11e9-a37c-0050568213af</uuidstructure>
+			<uuidresource>4ca7a405-0381-11e9-a37c-0050568213af</uuidresource>
+			<datelastmodified>Thu, 10 Jan 2019 08:01:42 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 19 Dec 2018 11:29:08 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[comunicacion.bundle]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/comunicacion.bundle.js.map</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/comunicacion.bundle.js.map</destination>
+			<type>plain</type>
+			<uuidstructure>4cb40017-0381-11e9-a37c-0050568213af</uuidstructure>
+			<uuidresource>4cb40018-0381-11e9-a37c-0050568213af</uuidresource>
+			<datelastmodified>Thu, 10 Jan 2019 08:01:42 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 19 Dec 2018 11:29:08 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[comunicacion.bundle.js]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/comunicacionStorage.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/comunicacionStorage.js</destination>
+			<type>plain</type>
+			<uuidstructure>4c0e6094-fc94-11e8-a4c9-0050568213af</uuidstructure>
+			<uuidresource>4c0e6095-fc94-11e8-a4c9-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 10 Dec 2018 15:57:29 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[comunicacionStorage]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/custom-elements-es5-adapter.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/custom-elements-es5-adapter.js</destination>
+			<type>plain</type>
+			<uuidstructure>51399d2c-0383-11e9-a37c-0050568213af</uuidstructure>
+			<uuidresource>51399d2d-0383-11e9-a37c-0050568213af</uuidresource>
+			<datelastmodified>Wed, 19 Dec 2018 11:43:34 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 19 Dec 2018 11:43:34 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[custom-elements-es5-adapter]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/dicyt.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/dicyt.js</destination>
+			<type>plain</type>
+			<uuidstructure>3dfb3f85-ff81-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>3dfb3f86-ff81-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:29:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:18:39 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[dicyt]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/eventos.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/eventos.js</destination>
+			<type>plain</type>
+			<uuidstructure>03a0bb02-ebea-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>03a0bb03-ebea-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 29 Jan 2019 11:11:46 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 10:58:15 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[eventos]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/flickr.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/flickr.js</destination>
+			<type>plain</type>
+			<uuidstructure>b74eec17-e776-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>b74eec18-e776-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 29 Jan 2019 11:13:49 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 19:02:50 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[flickr]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/fuentes.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/fuentes.js</destination>
+			<type>plain</type>
+			<uuidstructure>47570558-fc92-11e8-a61a-0050568213af</uuidstructure>
+			<uuidresource>47570559-fc92-11e8-a61a-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:40:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 10 Dec 2018 15:43:02 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/header.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/header.js</destination>
+			<type>plain</type>
+			<uuidstructure>e3c4e2b6-1980-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>e3c4e2b7-1980-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:21:37 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 16 Jan 2019 11:21:37 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[header]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/navegacion.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/navegacion.js</destination>
+			<type>plain</type>
+			<uuidstructure>dc897965-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>dc897966-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Thu, 24 Jan 2019 11:56:51 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:43:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[navegacion]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/noticias.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/noticias.js</destination>
+			<type>plain</type>
+			<uuidstructure>dc8c5f98-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>dc8c5f99-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 29 Jan 2019 11:08:06 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:43:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[noticias]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/noticiashistorico.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/noticiashistorico.js</destination>
+			<type>plain</type>
+			<uuidstructure>7a0429ec-ebd3-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>7a0429ed-ebd3-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:29:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 08:16:55 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[noticiashistorico]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/polyfill.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/polyfill.js</destination>
+			<type>plain</type>
+			<uuidstructure>4379d03c-ff85-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>4379d03d-ff85-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:47:26 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:47:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[polyfill]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/polyfill.min.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/polyfill.min.js</destination>
+			<type>plain</type>
+			<uuidstructure>dc92530b-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>dc92530c-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 19 Dec 2018 11:43:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:43:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[polyfill.min]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/slideshow.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/slideshow.js</destination>
+			<type>plain</type>
+			<uuidstructure>244c7c36-feb8-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>244c7c37-feb8-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Tue, 22 Jan 2019 07:49:34 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Thu, 13 Dec 2018 09:19:07 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[slideshow]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/storage.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/storage.js</destination>
+			<type>plain</type>
+			<uuidstructure>e13e7b25-197f-11e9-bc72-0050568213af</uuidstructure>
+			<uuidresource>e13e7b26-197f-11e9-bc72-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:14:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 16 Jan 2019 11:14:24 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[storage]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/sw.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/sw.js</destination>
+			<type>plain</type>
+			<uuidstructure>4f8bc788-fc94-11e8-a4c9-0050568213af</uuidstructure>
+			<uuidresource>4f8bc789-fc94-11e8-a4c9-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 10:47:19 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 10 Dec 2018 15:57:35 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sw]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/theconversation.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/theconversation.js</destination>
+			<type>plain</type>
+			<uuidstructure>3e0551a8-ff81-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>3e0551a9-ff81-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:29:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:18:39 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[theconversation]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/twitter.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/twitter.js</destination>
+			<type>plain</type>
+			<uuidstructure>28b585ca-0381-11e9-a37c-0050568213af</uuidstructure>
+			<uuidresource>28b585cb-0381-11e9-a37c-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:29:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 19 Dec 2018 11:28:08 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[twitter]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/uvaheader.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/uvaheader.js</destination>
+			<type>plain</type>
+			<uuidstructure>2e898b0b-ff81-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>2e898b0c-ff81-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 09:50:56 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:18:13 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[uvaheader]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/webcomponents-bundle.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/webcomponents-bundle.js</destination>
+			<type>plain</type>
+			<uuidstructure>514c61df-0383-11e9-a37c-0050568213af</uuidstructure>
+			<uuidresource>514c61e0-0383-11e9-a37c-0050568213af</uuidresource>
+			<datelastmodified>Wed, 19 Dec 2018 11:43:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 19 Dec 2018 11:43:35 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[webcomponents-bundle]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/webcomponents-loader.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/webcomponents-loader.js</destination>
+			<type>plain</type>
+			<uuidstructure>4388c45f-ff85-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>4388c460-ff85-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Wed, 19 Dec 2018 11:43:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 09:47:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[webcomponents-loader]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/worker.js</source>
+			<destination>system/modules/es.uva.web.portal.niagara/resources/comunicacion/js/worker.js</destination>
+			<type>plain</type>
+			<uuidstructure>48956670-fc94-11e8-a4c9-0050568213af</uuidstructure>
+			<uuidresource>48956671-fc94-11e8-a4c9-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 12:46:29 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 10 Dec 2018 15:57:23 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[worker]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas</destination>
+			<type>folder</type>
+			<uuidstructure>c6291437-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:52 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:52 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-documento.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-documento.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>72665957-e7e4-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>72665958-e7e4-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 08:11:31 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:08:19 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-enlace.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-enlace.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>e7aa463f-e800-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>e7aa4640-e800-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 11:34:04 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:32:01 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-flexible.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-flexible.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>93204699-ebd4-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>9320469a-ebd4-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Mon, 19 Nov 2018 08:26:08 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 08:24:46 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-lista.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-lista.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>ef84e957-fd31-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>ef84e958-fd31-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Tue, 11 Dec 2018 10:53:04 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:45:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-noticia.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-noticia.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>cb27903a-e808-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>cb27903b-e808-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 28 Nov 2018 11:53:53 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 12:28:30 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-redsocial.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-redsocial.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>58a73edd-e7e6-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>58a73ede-e7e6-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 08:24:02 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:21:55 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-slideshow.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-slideshow.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>3bc39dbe-029c-11e9-afe8-0050568213af</uuidstructure>
+			<uuidresource>3bc39dbf-029c-11e9-afe8-0050568213af</uuidresource>
+			<datelastmodified>Tue, 18 Dec 2018 08:10:44 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 18 Dec 2018 08:09:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-subtitulo.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-subtitulo.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>3213921f-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>32139220-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 27 Nov 2018 12:09:25 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:19:47 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-titulo.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-titulo.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>c4d4b0e5-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>c4d4b0e6-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 28 Nov 2018 09:24:12 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:23:53 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nia-video.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nia-video.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>ae23ccec-e7ec-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>ae23cced-e7ec-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 09:15:12 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 09:07:15 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[Sample resource type schema]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested</destination>
+			<type>folder</type>
+			<uuidstructure>038f07cf-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 15:58:51 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:58:51 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/choicegenerico.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/choicegenerico.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>09c1cac1-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>09c1cac2-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 15:59:39 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:59:01 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/choiceredessociales.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/choiceredessociales.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>0e771573-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>0e771574-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:03:44 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:59:09 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/choiceslideshow.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/choiceslideshow.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>74d91c92-029c-11e9-afe8-0050568213af</uuidstructure>
+			<uuidresource>74d91c93-029c-11e9-afe8-0050568213af</uuidresource>
+			<datelastmodified>Tue, 18 Dec 2018 08:11:38 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 18 Dec 2018 08:11:01 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/documentos.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/documentos.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>2d13d865-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>2d13d866-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:01:55 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:00 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/elementoredsocial.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/elementoredsocial.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>b05f25f1-e7e6-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>b05f25f2-e7e6-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 14 Nov 2018 08:30:25 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:24:22 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/enlaces.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/enlaces.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>3011fd37-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>3011fd38-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:01:47 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:05 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/fechas.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/fechas.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>32f212b9-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>32f212ba-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:01:35 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:10 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/fechasplazos.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/fechasplazos.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>36500acb-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>36500acc-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:01:17 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:16 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/imagenes.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/imagenes.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>3940c21d-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>3940c21e-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:03:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:21 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/links.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/links.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>f63831b3-fd32-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>f63831b4-fd32-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Tue, 11 Dec 2018 10:53:29 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:53:15 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/mappings.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/mappings.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>9eb2f37c-fd32-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>9eb2f37d-fd32-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Tue, 11 Dec 2018 10:51:15 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:50:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/parrafos.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/parrafos.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>3c142d6f-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>3c142d70-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:00:58 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:26 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/schemas/nested/videos.xsd</source>
+			<destination>system/modules/es.uva.web.portal.niagara/schemas/nested/videos.xsd</destination>
+			<type>plain</type>
+			<uuidstructure>3edcea61-e75d-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>3edcea62-e75d-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 13 Nov 2018 16:00:50 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 16:00:30 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/templates</destination>
+			<type>folder</type>
+			<uuidstructure>c5f002d1-e754-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 14:59:51 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 14:59:51 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/modules/es.uva.web.portal.niagara/templates/comunicacion</destination>
+			<type>folder</type>
+			<uuidstructure>0c588277-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<datelastmodified>Tue, 13 Nov 2018 15:37:37 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:37:37 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/templates/comunicacion/detalle.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/templates/comunicacion/detalle.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>d724c74c-ff9d-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>d724c74d-ff9d-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Wed, 16 Jan 2019 11:34:03 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Fri, 14 Dec 2018 12:43:21 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/templates/comunicacion/frontpage.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/templates/comunicacion/frontpage.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>2300ae3e-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>2300ae3f-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Tue, 29 Jan 2019 08:46:34 GMT</datelastmodified>
+			<userlastmodified>e09338789f</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:38:15 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/templates/comunicacion/historico.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/templates/comunicacion/historico.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>7c420a2e-fed2-11e8-afe8-0050568213af</uuidstructure>
+			<uuidresource>7c420a2f-fed2-11e8-afe8-0050568213af</uuidresource>
+			<datelastmodified>Fri, 14 Dec 2018 10:50:00 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Thu, 13 Dec 2018 12:27:41 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/modules/es.uva.web.portal.niagara/templates/comunicacion/main.jsp</source>
+			<destination>system/modules/es.uva.web.portal.niagara/templates/comunicacion/main.jsp</destination>
+			<type>jsp</type>
+			<uuidstructure>25f228e1-e75a-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>25f228e2-e75a-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Thu, 10 Jan 2019 08:35:48 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:38:20 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property type="shared">
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/workplace</destination>
+			<type>folder</type>
+			<uuidstructure>20e1275f-f75b-11e6-abfe-0050568213af</uuidstructure>
+			<datelastmodified>Mon, 20 Feb 2017 10:56:16 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 20 Feb 2017 10:55:44 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>content-encoding</name>
+					<value><![CDATA[UTF-8]]></value>
+				</property>
+				<property>
+					<name>export</name>
+					<value><![CDATA[false]]></value>
+				</property>
+				<property>
+					<name>login-form</name>
+					<value><![CDATA[/system/login/index.html]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol>
+				<accessentry>
+					<uuidprincipal>ALL_OTHERS</uuidprincipal>
+					<flags>134</flags>
+					<permissionset>
+						<allowed>0</allowed>
+						<denied>0</denied>
+					</permissionset>
+				</accessentry>
+				<accessentry>
+					<uuidprincipal>ROLE.WORKPLACE_USER</uuidprincipal>
+					<flags>518</flags>
+					<permissionset>
+						<allowed>5</allowed>
+						<denied>0</denied>
+					</permissionset>
+				</accessentry>
+			</accesscontrol>
+		</file>
+		<file>
+			<destination>system/workplace/resources</destination>
+			<type>folder</type>
+			<uuidstructure>20e8c881-f75b-11e6-abfe-0050568213af</uuidstructure>
+			<datelastmodified>Mon, 20 Feb 2017 10:55:44 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 20 Feb 2017 10:55:44 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<destination>system/workplace/resources/filetypes</destination>
+			<type>folder</type>
+			<uuidstructure>20efa653-f75b-11e6-abfe-0050568213af</uuidstructure>
+			<datelastmodified>Wed, 12 Dec 2018 07:39:10 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 20 Feb 2017 10:55:44 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties/>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-documento.png</source>
+			<destination>system/workplace/resources/filetypes/nia-documento.png</destination>
+			<type>image</type>
+			<uuidstructure>72df32da-e7e4-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>72df32db-e7e4-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:08:20 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-documento_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-documento_big.png</destination>
+			<type>image</type>
+			<uuidstructure>735489ee-e7e4-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>735489ef-e7e4-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:08:20 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-enlace.png</source>
+			<destination>system/workplace/resources/filetypes/nia-enlace.png</destination>
+			<type>image</type>
+			<uuidstructure>e7d267b2-e800-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>e7d267b3-e800-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:32:02 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-enlace_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-enlace_big.png</destination>
+			<type>image</type>
+			<uuidstructure>e7e09886-e800-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>e7e09887-e800-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:32:02 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-flexible.png</source>
+			<destination>system/workplace/resources/filetypes/nia-flexible.png</destination>
+			<type>image</type>
+			<uuidstructure>936e8dac-ebd4-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>936e8dad-ebd4-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 08:24:47 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-flexible_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-flexible_big.png</destination>
+			<type>image</type>
+			<uuidstructure>93a88970-ebd4-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>93a88971-ebd4-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Mon, 19 Nov 2018 08:24:47 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-lista.png</source>
+			<destination>system/workplace/resources/filetypes/nia-lista.png</destination>
+			<type>image</type>
+			<uuidstructure>efa087aa-fd31-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>efa087ab-fd31-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Mon, 20 Feb 2017 10:59:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:45:55 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-lista_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-lista_big.png</destination>
+			<type>image</type>
+			<uuidstructure>efae1c3e-fd31-11e8-9c15-0050568213af</uuidstructure>
+			<uuidresource>efae1c3f-fd31-11e8-9c15-0050568213af</uuidresource>
+			<datelastmodified>Mon, 20 Feb 2017 10:59:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 11 Dec 2018 10:45:55 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-noticia.png</source>
+			<destination>system/workplace/resources/filetypes/nia-noticia.png</destination>
+			<type>image</type>
+			<uuidstructure>cb49490d-e808-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>cb49490e-e808-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 12:28:30 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-noticia_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-noticia_big.png</destination>
+			<type>image</type>
+			<uuidstructure>cb4fffd1-e808-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>cb4fffd2-e808-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 12:28:30 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-redsocial.png</source>
+			<destination>system/workplace/resources/filetypes/nia-redsocial.png</destination>
+			<type>image</type>
+			<uuidstructure>598d8030-e7e6-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>598d8031-e7e6-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:21:56 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-redsocial_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-redsocial_big.png</destination>
+			<type>image</type>
+			<uuidstructure>59a770d4-e7e6-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>59a770d5-e7e6-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 08:21:56 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-slideshow.png</source>
+			<destination>system/workplace/resources/filetypes/nia-slideshow.png</destination>
+			<type>image</type>
+			<uuidstructure>3bde9fd1-029c-11e9-afe8-0050568213af</uuidstructure>
+			<uuidresource>3bde9fd2-029c-11e9-afe8-0050568213af</uuidresource>
+			<datelastmodified>Mon, 20 Feb 2017 10:59:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 18 Dec 2018 08:09:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-slideshow_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-slideshow_big.png</destination>
+			<type>image</type>
+			<uuidstructure>3bec8285-029c-11e9-afe8-0050568213af</uuidstructure>
+			<uuidresource>3bec8286-029c-11e9-afe8-0050568213af</uuidresource>
+			<datelastmodified>Mon, 20 Feb 2017 10:59:24 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 18 Dec 2018 08:09:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-subtitulo.png</source>
+			<destination>system/workplace/resources/filetypes/nia-subtitulo.png</destination>
+			<type>image</type>
+			<uuidstructure>323d8752-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>323d8753-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:19:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-subtitulo_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-subtitulo_big.png</destination>
+			<type>image</type>
+			<uuidstructure>324c5466-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>324c5467-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:19:48 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-titulo.png</source>
+			<destination>system/workplace/resources/filetypes/nia-titulo.png</destination>
+			<type>image</type>
+			<uuidstructure>c50e8598-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>c50e8599-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:23:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-titulo_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-titulo_big.png</destination>
+			<type>image</type>
+			<uuidstructure>c52ff04c-e7ff-11e8-9542-0242ac11002b</uuidstructure>
+			<uuidresource>c52ff04d-e7ff-11e8-9542-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 11:23:54 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-video.png</source>
+			<destination>system/workplace/resources/filetypes/nia-video.png</destination>
+			<type>image</type>
+			<uuidstructure>ae6b0f1f-e7ec-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>ae6b0f20-e7ec-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 09:07:15 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/nia-video_big.png</source>
+			<destination>system/workplace/resources/filetypes/nia-video_big.png</destination>
+			<type>image</type>
+			<uuidstructure>ae9839a3-e7ec-11e8-b14c-0242ac11002b</uuidstructure>
+			<uuidresource>ae9839a4-e7ec-11e8-b14c-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Wed, 14 Nov 2018 09:07:16 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/uva-noticia.png</source>
+			<destination>system/workplace/resources/filetypes/uva-noticia.png</destination>
+			<type>image</type>
+			<uuidstructure>65463f54-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>65463f55-e75c-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:16,h:16]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+		<file>
+			<source>system/workplace/resources/filetypes/uva-noticia_big.png</source>
+			<destination>system/workplace/resources/filetypes/uva-noticia_big.png</destination>
+			<type>image</type>
+			<uuidstructure>655f4598-e75c-11e8-b8e0-0242ac11002b</uuidstructure>
+			<uuidresource>655f4599-e75c-11e8-b8e0-0242ac11002b</uuidresource>
+			<datelastmodified>Wed, 06 Jun 2018 09:34:05 GMT</datelastmodified>
+			<userlastmodified>Admin</userlastmodified>
+			<datecreated>Tue, 13 Nov 2018 15:54:25 GMT</datecreated>
+			<usercreated>Admin</usercreated>
+			<flags>0</flags>
+			<properties>
+				<property>
+					<name>Title</name>
+					<value><![CDATA[sample-icon_big]]></value>
+				</property>
+				<property type="shared">
+					<name>image.size</name>
+					<value><![CDATA[w:24,h:24]]></value>
+				</property>
+			</properties>
+			<relations/>
+			<accesscontrol/>
+		</file>
+	</files>
+</export>

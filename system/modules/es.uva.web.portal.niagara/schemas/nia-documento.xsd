@@ -1,0 +1,45 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="NIADocumentos" type="OpenCmsNIADocumentos"/>
+
+	<xsd:complexType name="OpenCmsNIADocumentos">
+		<xsd:sequence>
+			<xsd:element name="NIADocumento" type="OpenCmsNIADocumento" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsNIADocumento">
+		<xsd:sequence>
+			<xsd:element name="Texto" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Fichero" type="OpenCmsVfsFile" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<mappings>
+				<mapping element="Texto" mapto="property:Title" />
+				<mapping element="Texto" mapto="urlName" />
+			</mappings>
+			<defaults>
+				<default element="Texto" value="Cambia el texto" />
+			</defaults>
+			<layouts>
+				<layout element="Fichero" widget="DownloadGalleryWidget" configuration="{class:'es.uva.web.portal.opencms.v85.gallerywidget.UVaCmsVfsFileWidgetConfiguration',startup:'dynamic',type:'dynamic'}" />
+			</layouts>
+			<validationrules>
+				<rule element="Texto" regex="!^$" type="error" message="${key.editor.errormessage.Documento.Texto.notempty|${validation.path}}" />
+				<rule element="Texto" regex="!^\s+([A-Za-z0-9]*)" type="warning" message="${key.editor.errormessage.Documento.Texto.leftempty|${validation.path}}" />
+				
+				<rule element="Fichero" regex="!^$" type="error" message="${key.editor.errormessage.Documento.Fichero.notempty|${validation.path}}" />
+				<rule element="Fichero" regex="!^\s+([A-Za-z0-9]*)" type="warning" message="${key.editor.errormessage.Documento.Fichero.leftempty|${validation.path}}" />
+			</validationrules>
+			<relations/>
+			<searchsettings containerPageOnly="true"/>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+</xsd:schema>

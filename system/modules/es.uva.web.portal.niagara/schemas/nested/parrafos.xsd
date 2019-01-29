@@ -1,0 +1,42 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="Parrafos" type="OpenCmsParrafos"/>
+	
+	<xsd:complexType name="OpenCmsParrafos">
+		<xsd:sequence>
+			<xsd:element name="Parrafo" type="OpenCmsParrafo" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+ 
+	<xsd:complexType name="OpenCmsParrafo">
+		<xsd:sequence>
+			<xsd:element name="Titulo" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Texto" type="OpenCmsString" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<!-- textos de ayuda -->
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.choicegenerico.parrafos.workplace.properties">
+					<bundle locale="es">
+						<resource key="editor.errormessage.Texto.notempty">El párrafo no puede estar vacío</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.Texto.notempty">El párrafo no puede estar vacío</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<validationrules>
+				<rule element="Texto" regex="!^$" type="error" message="${key.editor.errormessage.Texto.notempty|${validation.path}}" />
+			</validationrules>
+			<layouts>
+				<layout element="Texto" widget="HtmlWidget"/>
+			</layouts>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

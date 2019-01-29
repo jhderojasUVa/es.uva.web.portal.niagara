@@ -1,0 +1,96 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/imagenes.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/choicegenerico.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/choiceredessociales.xsd"/>
+	
+	<xsd:element name="NIANoticias" type="OpenCmsNIANoticias"/>
+
+	<xsd:complexType name="OpenCmsNIANoticias">
+		<xsd:sequence>
+			<xsd:element name="NIANoticia" type="OpenCmsNIANoticia" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsNIANoticia">
+		<xsd:sequence>
+			<xsd:element name="Titulo" type="OpenCmsString" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Subtitulo" type="OpenCmsString" minOccurs="0" maxOccurs="5"/>
+			<xsd:element name="Categoria_ramas" type="OpenCmsCategory" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Categoria_localizacion" type="OpenCmsCategory" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Categoria_tipo" type="OpenCmsCategory" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Fuente" type="OpenCmsString" minOccurs="0" maxOccurs="5"/>
+			<xsd:element name="Lugar" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Fecha" type="OpenCmsDateTime" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Tipo" type="OpenCmsString" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ImagenDestacada" type="OpenCmsVfsImage" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Destinatarios" type="OpenCmsCategory" minOccurs="0"/>
+			<xsd:element name="TitularOrientado" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Entradilla" type="OpenCmsHtml" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Cuerpo" type="OpenCmsHtml" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Ladillo" type="OpenCmsHtml" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Imagen" type="OpenCmsImagen" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Recuadro" type="OpenCmsHtml" minOccurs="0" maxOccurs="20"/>
+			<xsd:element name="RedSocial" type="OpenCmsChoiceRedSocial" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Elementos" type="OpenCmsChoiceGenerico" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="required"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<mappings>
+				<mapping element="Titulo" mapto="property:Title" />
+				<mapping element="Titulo" mapto="urlName" />
+				<mapping element="ImagenDestacada" mapto="property:Imagen"/>
+				<mapping element="Tipo" mapto="property:campo.tipo"/>
+				<mapping element="Fecha" mapto="attribute:datereleased"/>
+			</mappings>
+			<defaults>
+				<default element="Titulo" value="%(key.label.default.Titulo)"/>
+				<default element="Fecha" value="%(currenttime)"/>
+				<default element="Elementos/Plazo/Inicio" value="%(currenttime)"/>
+				<default element="Elementos/Plazo/Fin" value="%(currenttime + 86400000)"/>
+				<default element="Elementos/Fecha/Date" value="%(currenttime)"/>
+			</defaults>
+			<layouts>
+				<layout element="Tipo" widget="MultiSelectWidget" configuration="1:La UVa informa*|2:Agenda|3:Fueron portada|4:Notas de prensa|5:Comunicado para la prensa|6:Ven a la UVa|7:Portada Web|8:Historia y patrimonio|9:Permanente"/>
+				<!--
+				 <layout element="Imagen" widget="VfsImageWidget" /> 
+				-->
+				<layout element="Recuadro" widget="HtmlWidget" configuration="link,anchor,imagegallery,downloadgallery,linkgallery,table"/>
+				<layout element="Imagen" widget="ImageGalleryWidget" configuration="{useformat:true,type:'gallery'}"/>
+				<layout element="Categoria_ramas" widget="CategoryWidget" configuration="category=comunicacion/ramas/|onlyleafs=true"/>
+				<layout element="Categoria_localizacion" widget="CategoryWidget" configuration="category=comunicacion/localizacion/|onlyleafs=true"/>
+				<layout element="Categoria_tipo" widget="CategoryWidget" configuration="category=comunicacion/tipo/|onlyleafs=true"/>
+				<layout element="Destinatarios" widget="CategoryWidget" configuration="category=/system/categories/destinatarios/|onlyleafs=false"/>
+				<!--  Elementos de texto  -->
+				<layout element="Cuerpo" widget="HtmlWidget" configuration="link,anchor,imagegallery,downloadgallery,linkgallery,table"/>
+			</layouts>
+			<validationrules>
+				<rule element="Titulo" regex="^(.{1,250})$" type="error" message="${key.editor.errormessage.campo.notempty|${validation.path}}"/>
+				<rule element="Categoria_ramas" regex="!^$" type="error" message="${key.editor.errormessage.campo.notempty|${validation.path}}"/>
+				<rule element="Categoria_tipo" regex="!^$" type="error" message="${key.editor.errormessage.campo.notempty|${validation.path}}"/>
+			</validationrules>
+			<relations/>
+			<searchsettings >
+				<searchsetting element="Titulo" searchcontent="true" >
+					<solrfield targetfield="Titulo"  />
+				</searchsetting>
+			<!--
+				<searchsetting element="Entradilla" searchcontent="true">
+					<solrfield targetfield="Resumen"/>
+				</searchsetting>
+				<searchsetting element="Entradilla" searchcontent="true">
+					<solrfield targetfield="TagCloud"/>
+				</searchsetting>
+				<searchsetting element="TitularOrientado" searchcontent="true">
+					<solrfield targetfield="TitularOrientado"/>
+				</searchsetting>
+			-->
+			</searchsettings>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+</xsd:schema>

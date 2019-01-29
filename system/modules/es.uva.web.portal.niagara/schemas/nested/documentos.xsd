@@ -1,0 +1,42 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+
+	<xsd:element name="Documentos" type="OpenCmsDocumentos"/>
+	
+	<xsd:complexType name="OpenCmsDocumentos">
+		<xsd:sequence>
+			<xsd:element name="Documento" type="OpenCmsDocumento" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsDocumento">
+		<xsd:sequence>
+			<!-- <xsd:element name="Titulo" type="OpenCmsString" minOccurs="0" maxOccurs="1" /> -->
+			<xsd:element name="Texto" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Document" type="OpenCmsVfsFile" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation> 
+		<xsd:appinfo>
+			<resourcebundles>
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.choicegenerico.documentos.workplace.properties">
+					<bundle locale="es">
+						<resource key="editor.errormessage.Document.notempty">Debes seleccionar un documento</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.Document.notempty">Debes seleccionar un documento</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<validationrules>
+				<rule element="Document" regex="!^$" type="error" message="${key.editor.errormessage.Document.notempty|${validation.path}}" />
+			</validationrules>
+			<layouts>
+				<layout element="Document" widget="DownloadGalleryWidget" configuration="{class:'es.uva.web.portal.opencms.v85.gallerywidget.UVaCmsVfsFileWidgetConfiguration',startup:'dynamic',type:'dynamic'}"/>
+			</layouts>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

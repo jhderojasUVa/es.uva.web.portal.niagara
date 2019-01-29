@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NewFormatters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="opencms://system/modules/org.opencms.ade.config/schemas/formatters/new_formatter.xsd">
+  <NewFormatter language="en">
+    <NiceName><![CDATA[Formateador de Detalle para una Noticia de Comunicación]]></NiceName>
+    <Type><![CDATA[nia-noticia]]></Type>
+    <Jsp>
+      <link type="WEAK">
+        <target><![CDATA[/system/modules/es.uva.web.portal.niagara/formatters/nia-noticia-detail-formatter.jsp]]></target>
+        <uuid>f63a9ba1-fd35-11e8-9c15-0050568213af</uuid>
+      </link>
+    </Jsp>
+    <Rank><![CDATA[500]]></Rank>
+    <Match>
+      <Types>
+        <ContainerType><![CDATA[detail]]></ContainerType>
+      </Types>
+    </Match>
+    <Preview>false</Preview>
+    <SearchContent>true</SearchContent>
+    <AutoEnabled>true</AutoEnabled>
+    <Detail>true</Detail>
+    <Display>false</Display>
+    <NestedContainers>false</NestedContainers>
+  </NewFormatter>
+</NewFormatters>

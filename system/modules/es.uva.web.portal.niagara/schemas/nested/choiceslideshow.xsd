@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+	Ficha para contenido tipo Choice Slideshow
+
+ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/imagenes.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/videos.xsd"/>
+	
+	<xsd:element name="ChoiceSlideshows" type="OpenCmsChoiceSlideshows"/>
+	
+	<xsd:complexType name="OpenCmsChoiceSlideshows">
+		<xsd:sequence>
+			<xsd:element name="ChoiceSlideshow" type="OpenCmsChoiceSlideshow" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsChoiceSlideshow">
+		<xsd:choice minOccurs="0">
+			<!-- 
+			Tipos de elementos del tipo choice slideshow
+			-->	
+			<xsd:element name="Texto" type="OpenCmsString"  minOccurs="0"/>
+			<xsd:element name="TextoHTML" type="OpenCmsHtml"  minOccurs="0"/>
+			<xsd:element name="Imagen" type="OpenCmsImagen" minOccurs="0"/>
+			<xsd:element name="Video" type="OpenCmsVideo" minOccurs="0"/>
+		</xsd:choice>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundle name="es.uva.web.portal.niagara.slideshow.workplace.xml"/>
+			<mappings>
+				<!-- Mapeos -->
+			</mappings>
+			<validationrules>
+				<!-- Reglas de validacion -->
+				<rule element="Texto" regex="!^$" type="error" message="${key.editor.errormessage.ChoiceSlideshow.Texto.notempty|${validation.path}}" />
+				<rule element="Texto" regex="!^\s+([A-Za-z0-9]*)" type="warning" message="${key.editor.errormessage.ChoiceSlideshow.Texto.leftempty|${validation.path}}" />
+				<rule element="TextoHTML" regex="!^$" type="error" message="${key.editor.errormessage.ChoiceSlideshow.TextoHTML.notempty|${validation.path}}" />
+			</validationrules>
+			<layouts>
+				<!-- Widgets a usar en los tipos -->
+				<layout element="TextoHTML" widget="HtmlWidget"  configuration="link,anchor,imagegallery,downloadgallery,linkgallery,table" />
+			</layouts>
+			<defaults>
+				<!-- Texto estandar -->
+				<!--
+				<default element="Tabla" value="<table><tr><th>Cabecera 1</th><th>Cabecera 2</th><th>Cabecera 3</th></tr><tr><td>Texto 1</td><td>Texto 2</td><td>Texto 3</td></tr><tr><td>Texto 4</td><td>Texto 5</td><td>Texto 6</td></tr></table>"/>
+				-->
+				<default element="Texto" value="%(key.default.ChoiceSlideshow.Texto)"/>
+			</defaults>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>

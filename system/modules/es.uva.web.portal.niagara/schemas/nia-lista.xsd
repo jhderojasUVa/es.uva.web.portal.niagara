@@ -1,0 +1,68 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/mappings.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/links.xsd"/>
+
+	<xsd:element name="NIALists" type="OpenCmsNIALists"/>
+
+	<xsd:complexType name="OpenCmsNIALists">
+		<xsd:sequence>
+			<xsd:element name="NIAList" type="OpenCmsNIAList" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsNIAList">
+		<xsd:sequence>
+			<xsd:element name="Title" type="OpenCmsString"/>
+			<xsd:element name="Text" type="OpenCmsHtml" minOccurs="0"/>
+			<xsd:element name="TextBottom" type="OpenCmsHtml" minOccurs="0"/>
+			<xsd:element name="Collector" type="OpenCmsString"/>
+			<xsd:element name="Parameter" type="OpenCmsString"/>
+			<xsd:element name="Links" type="OpenCmsVfsFile" minOccurs="0" maxOccurs="10"/>
+			<xsd:element name="More" type="OpenCmsString" minOccurs="0"/>
+			<xsd:element name="Createpath" type="OpenCmsString" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="TypeToCreate" type="OpenCmsString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ItemsPerPage" type="OpenCmsString" minOccurs="0"/>
+			<xsd:element name="AdditionalLink" type="OpenCmsListLink" minOccurs="0"/>			
+			<xsd:element name="Mapping" type="OpenCmsListMapping" minOccurs="0" maxOccurs="6"/>
+			<!-- propiedad estilos -->
+			<!--<xsd:element name="Estilo" type="OpenCmsString" minOccurs="1" maxOccurs="1"/>-->
+		</xsd:sequence>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundle name="es.uva.web.portal.niagara.lists"/>
+			<tabs>
+				<tab element="Title" name="TabGeneral" collapse="false"/>
+				<tab element="Mapping" name="TabMappings" collapse="false"/>
+			</tabs>
+			<mappings>
+				<!-- mapping -->
+			</mappings>
+			<defaults>
+				<default element="Title" value="Add a new title here" />
+				<default element="Text" value="Add your text" />
+			</defaults>
+			<layouts>
+				<layout element="Text" widget="HtmlWidget" configuration="height:100px,source,imagegallery,link"/>
+				<layout element="TextBottom" widget="HtmlWidget" configuration="height:100px,source,imagegallery,link"/>
+				<!-- DA ERROR <layout element="Collector" widget="es.uva.web.portal.opencms.tipos.list.CmsCollectorSelectWidget"/>-->
+				<layout element="Links" widget="VfsFileWidget"/>
+				<layout element="ItemsPerPage" widget="ComboWidget" configuration="2|5|10*|15|20|25|50"/>
+				
+				<layout element="TypeToCreate" widget="TypeComboWidget" />
+				<!--<layout element="Estilo" widget="ComboWidget" configuration="Tabs|Lista|Titulo"/>-->
+			</layouts>
+			<validationrules>
+				<rule element="Title" regex="^(.{1,250})$" type="error" message="${key.editor.errormessage.Titulo.notempty|${validation.path}}" />
+			</validationrules>
+			<relations/>
+			<searchsettings containerPageOnly="false"/>
+			
+		</xsd:appinfo>
+	</xsd:annotation>
+
+</xsd:schema>

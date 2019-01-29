@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ElementViews xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="opencms://system/modules/org.opencms.ade.config/schemas/element_view.xsd">
+  <ElementView language="en">
+    <Title><![CDATA[Tipos comunicacion]]></Title>
+    <TitleKey><![CDATA[comunicaciongroup.desc]]></TitleKey>
+    <Order><![CDATA[20]]></Order>
+  </ElementView>
+</ElementViews>

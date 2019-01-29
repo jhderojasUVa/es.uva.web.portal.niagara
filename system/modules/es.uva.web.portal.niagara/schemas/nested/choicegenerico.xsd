@@ -1,0 +1,61 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+	<xsd:include schemaLocation="opencms://opencms-xmlcontent.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/parrafos.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/fechas.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/fechasplazos.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/imagenes.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/enlaces.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/documentos.xsd"/>
+	<xsd:include schemaLocation="opencms://system/modules/es.uva.web.portal.niagara/schemas/nested/videos.xsd"/>
+	
+
+	<xsd:element name="ChoiceGenericos" type="OpenCmsChoiceGenericos"/>
+	
+	<xsd:complexType name="OpenCmsChoiceGenericos">
+		<xsd:sequence>
+			<xsd:element name="ChoiceGenerico" type="OpenCmsChoiceGenerico" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="OpenCmsChoiceGenerico">
+		<xsd:choice>
+			<xsd:element name="Parrafo" type="OpenCmsParrafo" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Fecha" type="OpenCmsFecha" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Plazo" type="OpenCmsFechaPlazo" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Imagen" type="OpenCmsImagen" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Enlace" type="OpenCmsEnlace" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Documento" type="OpenCmsDocumento" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Video" type="OpenCmsVideo" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attribute name="language" type="OpenCmsLocale" use="optional"/>
+	</xsd:complexType>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<resourcebundles>
+				<xmlbundle name="es.uva.web.portal.opencms.v85.tipos.choicegenerico.workplace.properties">
+					<bundle locale="es">
+						<resource key="editor.errormessage.Texto.notempty">El párrafo no puede estar vacío</resource>
+						<resource key="label.Parrafo.Titulo">Título del párrafo</resource>
+						<resource key="label.Parrafo">Párrafo</resource>
+					</bundle>
+					<bundle locale="en">
+						<resource key="editor.errormessage.Texto.notempty">El párrafo no puede estar vacío</resource>
+						<resource key="label.Parrafo.Titulo">Título del párrafo</resource>
+						<resource key="label.Parrafo">Párrafo</resource>
+					</bundle>
+				</xmlbundle>
+			</resourcebundles>
+			<defaults>
+				<default element="Fecha/Date" value="%(currenttime)"/>
+				<default element="Plazo/Fin" value="%(currenttime + 86400000)"/>
+				<default element="Plazo/Inicio" value="%(currenttime + 86400000)"/>
+			</defaults>
+			<layouts>
+				<!-- Widgets a usar en los tipos -->
+				<layout element="Parrafo" widget="HtmlWidget" configuration="link,anchor,imagegallery,downloadgallery,linkgallery,table" />
+			</layouts>
+		</xsd:appinfo>
+	</xsd:annotation>  
+</xsd:schema>
