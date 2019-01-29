@@ -48,21 +48,31 @@ export class UVaSlideshow extends HTMLElement {
 					
 					
 				}
+				
 				@media screen and (max-width: 1199px) {
-					height: 380px;
+					:host {
+						height: 380px;
+					}
 				}
 
 				@media screen and (max-width: 999px) {
-					height: 300px;
+					:host {
+						height: 300px;
+					}
 				}
 
 				@media screen and (max-width: 769px) {
-					height: 200px;
+					:host {
+						height: 200px;
+					}
 				}
 
 				@media screen and (max-width: 400px) {
-					height: 180px;
+					host {
+						height: 180px;
+					}
 				}
+				
 				#slide-elements, #dots {
 					display: flex;
 					justify-content: center;
@@ -342,6 +352,18 @@ export class UVaSlideshowDot extends HTMLElement {
 					display: inline-block; 
 					text-align: center;
 				}
+
+				@media screen and (max-width: 769px) {
+					:host {
+						width: 20px;
+					}
+				}
+
+				@media screen and (max-width: 400px) {
+					host {
+						width: 18px;
+					}
+				}
 				:host(.active) {
 					background-color: black;
 					font-weight: bold; 
@@ -436,6 +458,14 @@ class UVaSlideshowImg extends HTMLElement {
 			let shadowRoot = this.attachShadow({mode: 'open'});
 			this.shadowRoot.innerHTML = `
 				<style>
+				:host {
+					width: 100%;
+				}
+				
+				img {
+					max-width: 100%;
+					object-fit: cover;
+				}
 				</style>
 				<img id="content" />
 				`;
