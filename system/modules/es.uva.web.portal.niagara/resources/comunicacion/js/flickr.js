@@ -425,28 +425,32 @@ class UVaFlickrPhotoset extends UVaFlickr {
 	}
 
 	connectedCallback() {
+		// Cuando aparece en el DOM
+		// Hacemos el connected de su padre
 		super.connectedCallback();
-		//Parmametros
 	}
 
 	disconnectedCallback() {
+		// Cuando se saca del DOM
+		// Hacemos lo que el padre dice
 		super.disconnectedCallback();
-		//	this.removeEventListener('click', this._onclick);
 	}
 
 	_render() {
+		// Renderizado o pintado
+		// Hacemos lo que el padre dice
 		super._render();
-		console.log(this._data);
-		super._render();
-		console.log("--> UVaFlickrAlbums _render");
-		console.log(this._data);
-		let count=1;
+
+		// recorremos los datos tantas veces como tenemos
+		let count = 1;
 		this._data.forEach(doc => {
 			if (count > parseInt(this._datanum)) return;
 			count++;
-			console.log(doc);
+			// Creamos cada uno de los elementos foto
 			let el = new UVaFlickrPhoto();
-			el.data=doc;
+			// Le inyectamos sus datos
+			el.data = doc;
+			// Lo metemos en el shadow para que aparezca
 			this.shadowRoot.appendChild(el);
 		});
 	}
